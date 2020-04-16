@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line eclipse script
-      if: "${{ matrix.backend }} == 'eclipse'"
+      if: matrix.backend == 'eclipse'
       run: echo Hello, world! ${{ matrix.backend }}
     - name: Run a one-line-one both script
       run: echo Hello, world! ${{ matrix.backend }}
