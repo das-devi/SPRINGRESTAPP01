@@ -10,11 +10,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        backend: [eclipse, swi-prolog]
+        backend: [rudra-dev, rudra-test]
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line eclipse script
-      if: matrix.backend == 'eclipse'
+      if: matrix.backend == 'rudra-dev'
       run: echo Hello, world! ${{ matrix.backend }}
     - name: Run a one-line-one both script
       run: echo Hello, world! ${{ matrix.backend }}
