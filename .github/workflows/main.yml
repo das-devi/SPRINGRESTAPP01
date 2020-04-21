@@ -23,8 +23,8 @@ jobs:
       with:
         server_address: smtp.gmail.com
         port: 465
-        username: das.angular@gmail.com 
-        password: DEvidAS@@545454
+        username: ${{secrets.MAIL_USERNAME}} 
+        password: ${{secrets.MAIL_PASSWORD}}
         subject: Workflow finished
         body: Job completed ${{job.status}}
         to: das.angular@gmail.com 
