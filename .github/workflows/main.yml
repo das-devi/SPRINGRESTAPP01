@@ -19,7 +19,7 @@ jobs:
     - name: Run a one-line-one both script
       run: echo Hello, world! ${{ matrix.backend }}
     - name: Send some mail
-      uses: wadeww/send-email-action@master
+      uses: dawidd6/action-send-mail@v2
       with:
         server_address: smtp.gmail.com
         port: 465
