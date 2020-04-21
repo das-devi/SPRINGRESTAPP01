@@ -18,4 +18,14 @@ jobs:
       run: echo Hello, world! ${{ matrix.backend }}
     - name: Run a one-line-one both script
       run: echo Hello, world! ${{ matrix.backend }}
-    
+    - name: Send some mail
+      uses: wadeww/send-email-action@master
+      with:
+        server_address: smtp.gmail.com
+        port: 465
+        username: das.angular@gmail.com 
+        password: DEvidAS@@545454
+        subject: Workflow finished
+        body: Job completed ${{job.status}}
+        to: das.angular@gmail.com 
+        from: das.angular@gmail.com 
