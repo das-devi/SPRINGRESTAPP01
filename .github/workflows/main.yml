@@ -29,4 +29,4 @@ jobs:
         subject: Workflow finished
         body: Job completed ${{job.status}}
         to: das.angular@gmail.com 
-        from: das.angular@gmail.com 
+        from: das.angular@gmail.com
