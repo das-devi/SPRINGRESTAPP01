@@ -8,10 +8,12 @@ on:
       - develop
 
 jobs:
-  test:
+  build:
+    env: 
+      userName: "das.angular@gmail.com"  
     name: Running Units Tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Echo
-      run: echo Hello, world!
+      run: echo Hello, world! ${{env.userName}}
