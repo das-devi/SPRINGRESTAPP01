@@ -1,20 +1,17 @@
-name: CI
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-jobs:
-  build:
-    env: 
-      username: "das.angular@gmail.com"  
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        backend: [rudra-dev, rudra-test]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line eclipse  sscript
-      run: echo Hello, world! ${{ matrix.backend }}
+name: Github Actions Example
 
+on:
+  pull_request:
+  push:
+    branches: 
+      - master
+      - develop
+
+jobs:
+  test:
+    name: Running Units Tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Echo
+      run: echo Hello, world!
