@@ -16,6 +16,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line eclipse  sscript
-      if: ${{env.username}} == 'das.angular@gmail.com'
       run: echo Hello, world! ${{ matrix.backend }}
 
