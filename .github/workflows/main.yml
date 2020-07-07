@@ -14,19 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line eclipse script
-      if: matrix.backend == 'rudra-dev'
+      if: ${{secrets.MAIL_USERNAME}} == 'das.angular@gmail.com'
       run: echo Hello, world! ${{ matrix.backend }}
-    - name: Run a one-line-one both script
-      run: echo Hello, world! ${{ matrix.backend }}
-    - name: Send some mail
-      uses: dawidd6/action-send-mail@v2
-      with:
-        server_address: smtp.gmail.com
-        port: 465
-        server_port: 465 
-        username: ${{secrets.MAIL_USERNAME}} 
-        password: ${{secrets.MAIL_PASSWORD}}
-        subject: Workflow finished
-        body: Job completed ${{job.status}}
-        to: das.angular@gmail.com
-        from: das.angular@gmail.com
+
