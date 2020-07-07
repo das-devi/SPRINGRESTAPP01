@@ -6,6 +6,8 @@ on:
     branches: [ master ]
 jobs:
   build:
+    env: 
+      username: "das.angular@gmail.com"  
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -14,6 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line eclipse script
-      if: ${{secrets.MAIL_USERNAME}} == 'das.angular@gmail.com'
+      if: ${{env.username}} == 'das.angular@gmail.com'
       run: echo Hello, world! ${{ matrix.backend }}
 
