@@ -16,5 +16,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Echo
-      if: ${{env.userName}} == "dass.angular@gmail.com"
+      if: contains(${{env.userName}}, '[dass.angular@gmail.com]')
       run: echo Hello, world! ${{env.userName}}
