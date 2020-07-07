@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     env: 
-      userName: "das.angular@gmail.com"  
+      userName: ${{secrets.MAIL_USERNAME}}  
     name: Running Units Tests
     runs-on: ubuntu-latest
     steps:
