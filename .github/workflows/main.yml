@@ -1,20 +1,19 @@
-name: Github Actions Example
-
+name: Manually triggered workflow
 on:
-  pull_request:
-  push:
-    branches: 
-      - master
-      - develop
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
 
 jobs:
-  build:
-    env: 
-      userName: ${{secrets.MAIL_USERNAME}}  
-    name: Running Units Tests
+  say_hello:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Echo
-      if: env.userName == 'dass.angular@gmail.com'
-      run: echo Hello, world! ${{env.userName}}
+    - run: |
+        echo "Hello ${{ github.event.inputs.name }}!"
+        echo "- in ${{ github.event.inputs.home }}!"
