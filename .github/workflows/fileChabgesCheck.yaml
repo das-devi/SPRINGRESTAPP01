@@ -13,11 +13,15 @@ jobs:
         with:
           format: space-delimited
       - name: Printing
+        env:
+          fileName: "false"  
         run: |
           echo "All:"
           echo "${ steps.abc.outputs.all }"
-          echo "::set-env name=IS_TMPL_FILES_CHANGED::${ steps.abc.outputs.all }"
-          echo "variable value ${IS_TMPL_FILES_CHANGED}"
+          echo "::set-env name=IS_TMPL_FILES_CHANGED::${{steps.abc.outputs.all}}"
+          echo "IS_TMPL_FILES_CHANGED value ${IS_TMPL_FILES_CHANGED}"
+          echo "::set-env name=fileName::${{steps.abc.outputs.all}}"
+          echo "fileName value ${fileName}"
           echo ${{env.IS_TMPL_FILES_CHANGED}}
           echo "Added:"
           echo "${{ steps.abc.outputs.added }}"
