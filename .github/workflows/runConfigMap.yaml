@@ -9,7 +9,7 @@ on:
      
 
 jobs:
-  say_hello:
+  run-configmap:
     runs-on: ubuntu-latest
     steps:
     - run: |
