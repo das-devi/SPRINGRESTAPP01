@@ -1,0 +1,15 @@
+name: run configmap manually 
+on:
+  workflow_dispatch:
+      inputs:
+      name:
+        description: 'Kubernete name space(default to dev)'
+        required: false
+        default: 'dev'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "configmap creation in ${{ github.event.inputs.name }} is done"
