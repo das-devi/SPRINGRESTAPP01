@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  say_hello:
+  deploy-prod:
     runs-on: ubuntu-latest
     steps:
     - run: |
