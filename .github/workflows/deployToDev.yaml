@@ -1,4 +1,4 @@
-dname: deploy to dev manually 
+name: deploy to dev manually 
 on:
   workflow_dispatch:
 
