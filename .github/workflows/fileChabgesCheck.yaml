@@ -19,7 +19,7 @@ jobs:
           echo "All:"
           echo "${{ steps.abc.outputs.all }}"
         
-          echo "::set-env name=fileName::${{steps.abc.outputs.all}}"
+          echo "::set-env name=fileName::das"
           echo "fileName value ${fileName}"
           echo "Added:"
           echo "${{ steps.abc.outputs.added }}"
