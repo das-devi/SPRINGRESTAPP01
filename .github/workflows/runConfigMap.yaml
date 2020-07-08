@@ -1,15 +1,16 @@
-name: run configmap manually 
+ame: run configmap manually 
 on:
   workflow_dispatch:
-      inputs:
+    inputs:
       name:
-        description: 'Kubernete name space(default to dev)'
+        description: 'Enter K8 nams-space (default to dev)'
         required: false
         default: 'dev'
+     
 
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "configmap creation in ${{ github.event.inputs.name }} is done"
+        echo "configmap creation in rudra-${{ github.event.inputs.name }} is completed!"
