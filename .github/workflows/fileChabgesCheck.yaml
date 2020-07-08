@@ -14,7 +14,7 @@ jobs:
           format: space-delimited
       - name: Printing
         env:
-          fileName: "false"  
+          fileName: ""  
         run: |
           echo "All:"
           echo "${{ steps.abc.outputs.all }}"
