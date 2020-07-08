@@ -1,4 +1,4 @@
-ame: run configmap manually 
+name: run configmap manually 
 on:
   workflow_dispatch:
     inputs:
