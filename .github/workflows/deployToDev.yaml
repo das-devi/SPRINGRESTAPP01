@@ -7,7 +7,7 @@ on:
       - '*_Release'
 
 jobs:
-  say_hello:
+  deploy-dev:
     runs-on: ubuntu-latest
     steps:
     - run: |
