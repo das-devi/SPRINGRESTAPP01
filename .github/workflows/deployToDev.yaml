@@ -1,10 +1,6 @@
 name: deploy to dev Auto 
 on:
-  pull_request:
-  push:
-    branches:
-      - master
-      - '*_Release'
+  workflow_dispatch:
 
 jobs:
   deploy-dev:
