@@ -1,4 +1,4 @@
-name: deploy to dev manually 
+dname: deploy to dev manually 
 on:
   workflow_dispatch:
 
@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Hello ${{ github.event.inputs.name }}!"
-        echo "- in ${{ github.event.inputs.home }}!"
+        echo "deployment to dev is completed"
+       
