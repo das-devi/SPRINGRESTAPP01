@@ -3,7 +3,9 @@ name: File Changes Action
 on: push
 
 jobs:
-  test:
+  build:
+    env:
+      IS_TMPL_FILES_CHANGED: "false"  
     runs-on: ubuntu-latest
     steps:
       - uses: jitterbit/get-changed-files@v1
@@ -14,6 +16,9 @@ jobs:
         run: |
           echo "All:"
           echo "${{ steps.abc.outputs.all }}"
+          IS_TMPL_FILES_CHANGED = "${{ steps.abc.outputs.all }}"
+          echo "IS_TMPL_FILES_CHANGED:"
+          echo $IS_TMPL_FILES_CHANGED
           echo "Added:"
           echo "${{ steps.abc.outputs.added }}"
           echo "Removed:"
