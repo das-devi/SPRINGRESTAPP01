@@ -1,17 +1,14 @@
-name: run configmap manually 
+name: deploy to dev Auto 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Enter K8 nams-space (default to dev)'
-        required: false
-        default: 'dev'
-     
+  pull_request:
+  push:
+    branches:
+      - master
+      - '*_Release'
 
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "configmap creation in rudra-${{ github.event.inputs.name }} is completed!"
-        
+        echo "deployment to dev is completed"
