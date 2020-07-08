@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "deployment to test is completed!"
+        echo "deployment to test is completed!!"
        
