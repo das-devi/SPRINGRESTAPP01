@@ -1,0 +1,10 @@
+name: deploy to prod manually 
+on:
+  workflow_dispatch:
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "deployment to prod is completed"
