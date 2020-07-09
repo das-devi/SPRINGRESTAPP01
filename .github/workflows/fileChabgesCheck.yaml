@@ -17,7 +17,7 @@ jobs:
           fileName: ""  
         run: |
           echo "All:"
-          echo "${{ steps.abc.outputs.all }}"
+          echo "${{ steps.abc.outputs.all }} contains tmpl ${{contains(steps.abc.outputs.all,'tmpl')}}"
         
           echo "::set-env name=fileName::das"
           echo "fileName value ${fileName}"
