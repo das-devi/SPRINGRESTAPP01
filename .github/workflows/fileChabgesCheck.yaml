@@ -34,9 +34,9 @@ jobs:
         
       - name: Get POM version
         run : |
-            cd SPRINGRESTAPP01
+           
             pwd
-            ls
+            ls -la
             cat variables
             echo $POM_VERSION
              
