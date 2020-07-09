@@ -22,7 +22,7 @@ jobs:
           echo "::set-env name=fileName::das"
           echo "fileName value ${fileName}"
           echo "Added:"
-          echo "${{ steps.abc.outputs.added }}"
+          echo "${{ steps.abc.outputs.added }} cont contains(steps.abc.outputs.added,'tmpl') "
           echo "Removed:"
           echo "${{ steps.abc.outputs.removed }}"
           echo "Renamed:"
