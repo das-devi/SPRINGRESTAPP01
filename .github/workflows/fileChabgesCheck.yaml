@@ -34,11 +34,10 @@ jobs:
         
       - name: Get POM version
         run : |
-           
+            git clone https://github.com/das-devi/SPRINGRESTAPP01.git
+            cd SPRINGRESTAPP01
             pwd
-            ls -la
-            cd runner
-            ls -la
+            ls -la      
             cat variables
             echo $POM_VERSION
              
