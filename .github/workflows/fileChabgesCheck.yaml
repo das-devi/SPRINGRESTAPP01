@@ -23,7 +23,7 @@ jobs:
           echo "fileName value ${fileName}"
           echo "Added:"
           echo "${{ steps.abc.outputs.added }} cont ${{contains(steps.abc.outputs.added,'tmpl')}} "
-          IS_TMPL_FILES_CHANGED=$(contains(steps.abc.outputs.added,'tmpl'))
+          echo "::set-env name=IS_TMPL_FILES_CHANGED::${{contains(steps.abc.outputs.added,'tmpl'))}}"
           echo "Removed:"
           echo "${{ steps.abc.outputs.removed }}"
           echo "Renamed:"
