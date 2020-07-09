@@ -37,6 +37,8 @@ jobs:
            
             pwd
             ls -la
+            cd runner
+            ls -la
             cat variables
             echo $POM_VERSION
              
