@@ -34,7 +34,7 @@ jobs:
         
       - name: Get POM version
         run : |
-            echo pwd
+            pwd
             cat variables
             echo $POM_VERSION
              
