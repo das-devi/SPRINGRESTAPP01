@@ -34,7 +34,7 @@ jobs:
         
       - name: Get POM version
         run : |
-            git clone https://github.com/das-devi/SPRINGRESTAPP01.git
+           
             cd SPRINGRESTAPP01
             pwd
             ls -la      
