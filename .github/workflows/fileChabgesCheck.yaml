@@ -39,7 +39,7 @@ jobs:
             pwd
             ls -la      
             cat variables
-            echo ${POM_VERSION}
+            echo ${{POM_VERSION}}
              
           
     
