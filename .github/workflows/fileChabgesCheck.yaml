@@ -24,7 +24,7 @@ jobs:
           echo "Added:"
           echo "${{ steps.abc.outputs.added }} cont ${{contains(steps.abc.outputs.added,'tmpl')}} "
           echo "::set-env name=IS_TMPL_FILES_CHANGED::contains(steps.abc.outputs.added,'tmpl')"
-          echo "Removed: ${{IS_TMPL_FILES_CHANGED}}"
+          echo "Removed: ${{env.IS_TMPL_FILES_CHANGED}}"
           echo "${{ steps.abc.outputs.removed }}"
           echo "Renamed:"
           echo "${{ steps.abc.outputs.renamed }}"
