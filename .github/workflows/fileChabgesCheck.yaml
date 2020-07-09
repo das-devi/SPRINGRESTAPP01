@@ -6,6 +6,7 @@ jobs:
   build:
     env:
       IS_TMPL_FILES_CHANGED:  "false"
+      POM_VERSION: ""  
     runs-on: ubuntu-latest
     steps:
       - uses: jitterbit/get-changed-files@v1
@@ -30,4 +31,9 @@ jobs:
         
       - name: Print env
         run: echo   $IS_TMPL_FILES_CHANGED
+        
+      - name: Get POM version
+        run : |
+          POM_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          echo "pom version is $POM_VERSION"
        
