@@ -44,7 +44,7 @@ jobs:
             echo ::set-env name=POM_VERSION::$(<variables)
             
       - name: Print pom version
-        run: echo " POM version is ${POM_VERSION}"
+        run: echo " POM version is ${POM_VERSION} ext files ${IS_TMPL_FILES_CHANGED}"
          
              
           
