@@ -5,7 +5,8 @@ on: push
 jobs:
   build:
     env:
-      IS_TMPL_FILES_CHANGED:  "false"
+      IS_TMPL_FILES_CHANGE:  "false"
+      IS_NON_TMPL_FILES_CHANGE:  "false"  
       POM_VERSION: ""  
     runs-on: ubuntu-latest
     steps:
@@ -14,16 +15,21 @@ jobs:
         with:
           format: space-delimited
           
-      - name: Data set-up
-        if: contains(steps.abc.outputs.all,'tmpl') ||  contains(steps.abc.outputs.all,'java')
-        run: echo "tmpl or java file canged"
+      - name: Non Tmpl file changes
+        if: contains(steps.abc.outputs.all,'.properties') ||  contains(steps.abc.outputs.all,'.java')
+        run: |
+         echo "properties or java file canges"
+          echo "::set-env name=env.IS_NON_TMPL_FILES_CHANGE::true"
+          
+      - name: Tmpl file changes
+        if: contains(steps.abc.outputs.all,'.tmpl')
+        run: |
+         echo "tmpl file canges"
+         echo "::set-env name=env.IS_TMPL_FILES_CHANGE::true"
         
       - name: Printing
         run: |
-          echo "All:"
-          echo "::set-env name=env.IS_TMPL_FILES_CHANGED::contains(steps.abc.outputs.all,'tmpl') || contains(steps.abc.outputs.all,'java')"
-          echo "printing list of files changed ${{ steps.abc.outputs.all }}"
-          echo "value of the flag is ${IS_TMPL_FILES_CHANGED}"
+          echo "value of the flag is tmpl: ${IS_TMPL_FILES_CHANGED} .. non-tmpl: ${IS_NON_TMPL_FILES_CHANGE}"
    
       - name: Get POM version
         run : |
