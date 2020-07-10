@@ -20,10 +20,10 @@ jobs:
           echo "printing list of files changed ${{ steps.abc.outputs.all }}"
           
       - name: Set env
-        run: echo ::set-env name=IS_TMPL_FILES_CHANGED::${{contains(steps.abc.outputs.all,'tmpl')}}
-        
-      - name: print env
-        run: echo   $IS_TMPL_FILES_CHANGED
+        run: |
+           echo ::set-env name=IS_TMPL_FILES_CHANGED::${{contains(steps.abc.outputs.all,'tmpl')}}
+           echo "value of  file changed flag is $IS_TMPL_FILES_CHANGED"
+      
         
       - name: Get POM version
         run : |
