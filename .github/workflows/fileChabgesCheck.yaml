@@ -38,6 +38,9 @@ jobs:
             git clone https://github.com/das-devi/SPRINGRESTAPP01.git
             cd SPRINGRESTAPP01      
             env.POM_VERSION = cat variables
+            echo "$POM_VERSION" > "$variables"
+            echo ${POM_VERSION}
+            echo "::set-env name=env.POM_VERSION::cat variables"
             echo ${POM_VERSION}
              
           
