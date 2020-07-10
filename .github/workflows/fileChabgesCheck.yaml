@@ -19,7 +19,7 @@ jobs:
         if: contains(steps.abc.outputs.all,'.properties') ||  contains(steps.abc.outputs.all,'.java')
         run: |
          echo "properties or java file canges"
-          env.IS_NON_TMPL_FILES_CHANGE="true"
+         IS_NON_TMPL_FILES_CHANGE="true"
           
       - name: Tmpl file changes
         if: contains(steps.abc.outputs.all,'.tmpl')
