@@ -16,12 +16,6 @@ jobs:
       - name: Printing
         run: |
           echo "All:"
-          echo "${{ steps.abc.outputs.all }} contains tmpl ${{contains(steps.abc.outputs.all,'tmpl')}}"
-        
-          echo "::set-env name=fileName::das"
-          echo "fileName value ${fileName}"
-          echo "Added:"
-          echo "${{ steps.abc.outputs.added }} cont ${{contains(steps.abc.outputs.added,'tmpl')}} "
           echo "::set-env name=env.IS_TMPL_FILES_CHANGED::${{contains(steps.abc.outputs.all,'tmpl')}} || ${{contains(steps.abc.outputs.all,'java')}}"
           echo "Removed: ${{env.IS_TMPL_FILES_CHANGED}}"
           echo "${{ steps.abc.outputs.removed }}"
@@ -29,7 +23,7 @@ jobs:
       - name: Set env
         run: echo ::set-env name=IS_TMPL_FILES_CHANGED::${{contains(steps.abc.outputs.all,'tmpl')}}
         
-      - name: Print env
+      - name: print env
         run: echo   $IS_TMPL_FILES_CHANGED
         
       - name: Get POM version
