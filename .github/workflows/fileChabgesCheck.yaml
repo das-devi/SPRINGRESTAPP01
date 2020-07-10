@@ -13,6 +13,11 @@ jobs:
         id: abc
         with:
           format: space-delimited
+          
+      - name: Data set-up
+        if: ${{contains(steps.abc.outputs.all,'tmpl')}} ||  ${{contains(steps.abc.outputs.all,'java')}}
+        run: echo "tmpl or java file canged"
+        
       - name: Printing
         run: |
           echo "All:"
