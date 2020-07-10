@@ -42,7 +42,7 @@ jobs:
             echo ${POM_VERSION}
             
       - name: Print pom version
-        run: echo ${POM_VERSION}
+        run: echo " POM version is ${POM_VERSION}"
          
              
           
