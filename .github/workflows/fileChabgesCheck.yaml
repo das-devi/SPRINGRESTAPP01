@@ -40,6 +40,12 @@ jobs:
            
             printf "%s" "env.POM_VERSION" > "variables"
             echo ${POM_VERSION}
+            
+            POM_VERSION=`cat variables`
+            echo ${POM_VERSION}
+            
+            POM_VERSION=$(<variables)
+            echo ${POM_VERSION}
          
              
           
