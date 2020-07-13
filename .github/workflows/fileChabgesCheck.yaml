@@ -34,7 +34,7 @@ jobs:
         
           
       - name: Print non tmpl file comparision
-        if:  contains(env.IS_NON_TMPL_FILES_CHANGE,'true')
+        if:  contains(env.IS_NON_TMPL_FILES_CHANGE,'true') && (contains('Hello','He') || contains('test','abc'))
         run: echo "contains non tmpl files"
    
       - name: Get POM version
