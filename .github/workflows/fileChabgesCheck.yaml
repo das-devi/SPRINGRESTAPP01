@@ -31,6 +31,8 @@ jobs:
         run: |
           echo "tmpl file changes: ${IS_TMPL_FILES_CHANGE}"
           echo "non tmpl file changes: ${IS_NON_TMPL_FILES_CHANGE}"
+          echo "comparision  "
+          echo contains(IS_NON_TMPL_FILES_CHANGE,'true')
    
       - name: Get POM version
         run : |
