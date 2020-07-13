@@ -10,7 +10,7 @@ jobs:
       POM_VERSION: ""  
     runs-on: ubuntu-latest
     steps:
-      - uses: jitterbit/get-changed-filesfdf@v1
+      - uses: jitterbit/get-changed-files@v1
         id: abc
         with:
           format: space-delimited
