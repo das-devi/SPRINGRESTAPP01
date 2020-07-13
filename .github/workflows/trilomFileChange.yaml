@@ -13,4 +13,8 @@ jobs:
         run: |
           
           echo '${{ steps.file_changes.outputs.files}}'
+          
+      - name: test java changes
+        if: contains(steps.file_changes.outputs.files,'.java')  
+        run: echo "Hello java changes"  
          
