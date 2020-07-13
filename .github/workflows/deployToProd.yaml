@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "deployment to prod is completed!!!"
+        echo "deployment to prod is dsfcompleted!!!"
