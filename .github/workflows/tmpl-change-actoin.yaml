@@ -1,4 +1,4 @@
-name: run tmpl manually 
+name: run tmpl changes
 on:
  push:
   paths: 
