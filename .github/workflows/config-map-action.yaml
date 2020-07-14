@@ -1,4 +1,4 @@
-name: push-develop
+name: run config map changes
 on:
   push:
     paths:
