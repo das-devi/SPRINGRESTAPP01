@@ -1,4 +1,4 @@
-name: run configmap manually 
+name: run java and xml file changes
 on:
  push:
   paths:
