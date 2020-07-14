@@ -1,0 +1,14 @@
+name: run configmap manually 
+on:
+ push:
+  path:
+   - "src/**"
+   - "**.xml"
+     
+
+jobs:
+  run-configmap:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "java change done"
