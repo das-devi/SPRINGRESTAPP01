@@ -2,7 +2,7 @@ name: push-develop
 on:
   push:
     paths: 
-      - "**.java"
+      - gluufim.properties"
 
    
 jobs:
