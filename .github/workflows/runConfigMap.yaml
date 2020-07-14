@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Enter K8 nams-space (default to dev)'
+        description: 'Enter K8 - nams-space (default to dev)'
         required: false
         default: 'dev'
      
