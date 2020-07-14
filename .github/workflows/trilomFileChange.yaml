@@ -1,10 +1,10 @@
 name: push-develop
 on:
   push:
-    paths: 
+    paths:
       - 'gluufim.properties'
 
-   
+  
 jobs:
   changes:
     runs-on: ubuntu-latest
