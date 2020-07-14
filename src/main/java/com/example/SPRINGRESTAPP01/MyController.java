@@ -8,7 +8,7 @@ public class MyController {
 	
 	@GetMapping("/greetings")
 	public String getGreetings() {
-		System.out.println("welcome dftd fffo my first kpplication dfsdffd..dff  dff..!!!");
+		System.out.println("welcome dftd fffo my first kpplication  dff..!!!");
 		return "Welcome to my  First web application";
 	}
 
