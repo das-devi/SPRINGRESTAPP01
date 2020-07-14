@@ -6,7 +6,7 @@ on:
 
   
 jobs:
-  changes:
+  run-configmap:
     runs-on: ubuntu-latest
     steps:
       - id: file_changes
