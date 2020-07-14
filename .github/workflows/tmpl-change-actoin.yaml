@@ -1,11 +1,8 @@
-name: run configmap manually 
+name: run tmpl manually 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Enter K8 - nams-space (default to dev)'
-        required: false
-        default: 'dev'
+ push:
+  paths: 
+    - "**.tmpl"
      
 
 jobs:
@@ -13,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "configmap creation in rudra-${{ github.event.inputs.name }} is completed!"
+        echo "tmpl file change done"
