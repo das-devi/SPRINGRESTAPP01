@@ -1,6 +1,6 @@
 name: File Changes Action
 
-on: push
+on: workflow_dispatch
 
 jobs:
   build:
