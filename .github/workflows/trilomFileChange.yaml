@@ -1,5 +1,10 @@
 name: push-develop
-on: [push]
+on:
+  push:
+    paths: 
+      - "**.java"
+
+   
 jobs:
   changes:
     runs-on: ubuntu-latest
