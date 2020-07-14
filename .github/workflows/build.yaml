@@ -7,7 +7,7 @@ on:
      
 
 jobs:
-  run-configmap:
+  mvn-build:
     runs-on: ubuntu-latest
     steps:
     - run: |
