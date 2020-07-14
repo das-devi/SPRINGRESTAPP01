@@ -2,7 +2,7 @@ name: push-develop
 on:
   push:
     paths:
-      - 'gluufim.properties'
+      - 'configmap/**'
 
   
 jobs:
